@@ -16,6 +16,11 @@ export default defineConfig({
       }
     }
   },
+  rules: [
+    ['font-nunito', {
+      'font-family': 'Nunito-Medium'
+    }]
+  ],
   presets: [
     presetUno(),
     presetAttributify(),

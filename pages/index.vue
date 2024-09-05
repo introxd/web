@@ -1,7 +1,7 @@
 <template>
   <div h-full flex="~ col" items-center justify-center>
-    <div text-16>
-      <span bg-clip-text text-transparent bg-gradient-to-tr from="#bd34fe" to="#47caff">
+    <div text="lt-sm:18 sm:20 xl:24">
+      <span font-nunito bg-clip-text text-transparent bg-gradient-to-tr from="#bd34fe" to="#47caff">
         Intro
       </span>
       <span>🤣</span>
