@@ -9,11 +9,13 @@
 
     <div mt-4 text="lt-sm:4 sm:5 xl:6">
       <span>定制个人简介页面，类似</span>
-      <a
-        href="/imba97" ml-2 relative hover="bg-clip-text text-transparent bg-gradient-to-tr" from="#bd34fe"
-        to="#47caff"
-        after="content-empty absolute bottom--0.5 left-0 w-full h-1px bg-black hover:bg-gradient-to-r from-#bd34fe to-#47caff"
-      >imba97</a>
+      <button
+        ml-2 relative hover="bg-clip-text text-transparent bg-gradient-to-tr" from="#bd34fe" to="#47caff"
+        b="0 b dashed black hover:#bd34fe" active="scale-95" transition="transform"
+        @click="router.push('/imba97')"
+      >
+        imba97
+      </button>
     </div>
 
     <Teleport to="body">
@@ -26,6 +28,8 @@
 
 <script lang="ts" setup>
 const { version } = usePackage()
+
+const router = useRouter()
 
 const visible = ref(false)
 
