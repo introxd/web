@@ -1,7 +1,7 @@
 <template>
   <div>
     <div flex items-center justify-between>
-      <div v-if="props.reverse">
+      <div v-if="hasImage && props.reverse">
         <img :src="image" size-32 rounded-full b="4 white solid">
       </div>
 
@@ -22,7 +22,7 @@
         </div>
       </div>
 
-      <div v-if="!props.reverse">
+      <div v-if="hasImage && !props.reverse">
         <img :src="image" size-32 rounded-full b="4 white solid">
       </div>
     </div>
@@ -37,7 +37,9 @@ const props = defineProps<{
   prefix: string
   title: string
   subtitle: string
-  image: string
+  image?: string
   reverse?: boolean
 }>()
+
+const hasImage = computed(() => !!props.image)
 </script>
