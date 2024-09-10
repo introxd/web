@@ -110,8 +110,12 @@
         </div>
 
         <!-- 关于绘画 -->
-        <div my-4>
+        <div mt-4>
           <Drawing />
+        </div>
+
+        <div mt-4>
+          <Cloth />
         </div>
       </div>
     </div>
@@ -120,6 +124,7 @@
 
 <script lang="ts" setup>
 import Drawing from './Drawing.vue'
+import Cloth from './Cloth.vue'
 
 const images = ref<{
   src: string

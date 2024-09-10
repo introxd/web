@@ -1,6 +1,10 @@
 <template>
   <div>
     <div flex items-center justify-between>
+      <div v-if="props.reverse">
+        <img :src="image" size-32 rounded-full b="4 white solid">
+      </div>
+
       <div flex items-center gap-4>
         <div font-italic text="7 #638167">
           <span relative before="content-empty absolute top-[-10%] right--1 w-1px h-120% rotate-10 bg-[#638167]">
@@ -18,7 +22,7 @@
         </div>
       </div>
 
-      <div>
+      <div v-if="!props.reverse">
         <img :src="image" size-32 rounded-full b="4 white solid">
       </div>
     </div>
@@ -34,5 +38,6 @@ const props = defineProps<{
   title: string
   subtitle: string
   image: string
+  reverse?: boolean
 }>()
 </script>
