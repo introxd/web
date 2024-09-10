@@ -7,3 +7,12 @@
   font-display: swap;
   font-style: normal;
 }
+
+@font-face {
+  font-family: 'linhai';
+  src: url('@/assets/fonts/linhai.woff2') format('woff2'),
+       url('@/assets/fonts/linhai.ttf') format('truetype');
+  font-weight: 500;
+  font-display: swap;
+  font-style: normal;
+}

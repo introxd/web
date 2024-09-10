@@ -17,9 +17,18 @@ export default defineConfig({
     }
   },
   rules: [
-    ['font-nunito', {
-      'font-family': 'Nunito-Medium'
-    }]
+    [
+      'font-nunito',
+      {
+        'font-family': 'Nunito-Medium'
+      }
+    ],
+    [
+      'font-linhai',
+      {
+        'font-family': 'linhai'
+      }
+    ]
   ],
   presets: [
     presetUno(),
