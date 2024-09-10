@@ -1,5 +1,5 @@
 <style lang="scss" scoped>
-@keyframes float {
+@keyframes float-image {
   0% {
     transform: translateY(0);
   }
@@ -16,7 +16,7 @@
 .float-images {
   img {
     --uno: absolute rounded-full b-4 b-white b-solid;
-    animation: float 5s ease-in-out infinite;
+    animation: float-image 5s ease-in-out infinite;
   }
 }
 </style>
@@ -69,7 +69,7 @@
 
       <!-- 文字 -->
       <div v-show="true || animateEnded" animate-fade-in flex="~ col" gap-4>
-        <div font-linhai text="5" flex="~ col" gap-4>
+        <div font-linhai text-5 flex="~ col" gap-4>
           <div>
             <div grid="~ cols-[4rem_1fr]">
               <div text="#a74e54">
@@ -82,7 +82,7 @@
 
             <div grid="~ cols-[4rem_1fr]">
               <div text="#a74e54">
-                工本
+                工笔
               </div>
               <div text="#638167">
                 120 ~ 500
@@ -110,14 +110,16 @@
         </div>
 
         <!-- 关于绘画 -->
-        <Painting />
+        <div my-4>
+          <Drawing />
+        </div>
       </div>
     </div>
   </div>
 </template>
 
 <script lang="ts" setup>
-import Painting from './Painting.vue'
+import Drawing from './Drawing.vue'
 
 const images = ref<{
   src: string
