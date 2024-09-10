@@ -20,13 +20,13 @@ export default defineConfig({
     [
       'font-nunito',
       {
-        'font-family': 'Nunito-Medium'
+        'font-family': 'Nunito-Medium, "Microsoft YaHei", "SimHei", "Arial", sans-serif;'
       }
     ],
     [
       'font-linhai',
       {
-        'font-family': 'linhai'
+        'font-family': 'linhai, "Microsoft YaHei", "SimHei", "Arial", sans-serif;'
       }
     ]
   ],
