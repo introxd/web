@@ -4,14 +4,27 @@
       <div flex gap-2>
         <div i-material-symbols-check-rounded relative top-1 h-6 w-6 bg="#a74e54" />
         <div flex-1 text="#638167">
-          基本是传统国画画风，擅长花卉植物，蝴蝶蜻蜓昆虫，山石游鱼小景，简单传统建筑。
+          <span>基本是</span>
+          <span underline="~ 1 offset-4 wavy #a74e54">传统国画画风</span>
+          <span>，擅长花卉植物，蝴蝶蜻蜓昆虫，山石游鱼小景，简单传统建筑。</span>
         </div>
       </div>
 
       <div flex gap-2>
         <div i-material-symbols-check-rounded relative top-1 h-6 w-6 bg="#a74e54" />
         <div flex-1 text="#638167">
-          可以画水彩风格，五彩斑斓的黑白七彩都行。
+          <span>可以画</span>
+          <span underline="~ 1 offset-4 wavy #a74e54">水彩风格</span>
+          <span>，</span>
+          <span bg-clip-text text-transparent bg-gradient-to-r from-red-500 to-orange>五</span>
+          <span bg-clip-text text-transparent bg-gradient-to-r from-yellow to-green>彩</span>
+          <span bg-clip-text text-transparent bg-gradient-to-r from-blue to-indigo>斑</span>
+          <span font-sans bg-clip-text text-transparent bg-gradient-to-r from-indigo to-purple>斓</span>
+          <span>的</span>
+          <span text-black>黑</span>
+          <span text-white bg-dark rounded-1>白</span>
+          <span bg-clip-text text-transparent bg-gradient-to-r from="#7583ab" to="#7a528d">七彩</span>
+          <span>都行。</span>
         </div>
       </div>
 
