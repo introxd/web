@@ -68,7 +68,7 @@
       <div mt-110 />
 
       <!-- 文字 -->
-      <div v-show="true || animateEnded" animate-fade-in flex="~ col" gap-4>
+      <div animate-fade-in flex="~ col" gap-4>
         <div font-linhai text-5 flex="~ col" gap-4>
           <div>
             <div grid="~ cols-[4rem_1fr]">
@@ -154,8 +154,6 @@ const allReady = computed(() => {
   return _values(ready).every(Boolean)
 })
 
-const animateEnded = ref(false)
-
 // 字体
 onMounted(async () => {
   document.fonts.ready.then(() => {
@@ -197,7 +195,5 @@ onMounted(async () => {
 
     await new Promise(resolve => setTimeout(resolve, _random(800, 1200)))
   }
-
-  animateEnded.value = true
 })
 </script>
