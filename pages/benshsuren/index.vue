@@ -109,21 +109,12 @@
           </div>
         </div>
 
-        <!-- 关于绘画 -->
-        <div mt-4>
+        <div mt-4 flex="~ col" gap-4>
           <Drawing />
-        </div>
-
-        <div mt-4>
           <Cloth />
-        </div>
-
-        <div mt-4>
           <BasicFlow />
-        </div>
-
-        <div mt-4>
           <Wash />
+          <Notes />
         </div>
 
         <div mt-4>
