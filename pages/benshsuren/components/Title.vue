@@ -2,7 +2,7 @@
   <div>
     <div flex items-center justify-between>
       <div v-if="hasImage && props.reverse">
-        <img :src="image" inline lt-xs="hidden" size="lt-md:20 md:32" rounded-full b="4 white solid">
+        <img :src="image" inline lt-xs="hidden" size="lt-md:20 md:32" rounded-full b="4 white solid" shadow-sm>
       </div>
 
       <div flex items-center gap-4>
@@ -27,7 +27,7 @@
       </div>
 
       <div v-if="hasImage && !props.reverse">
-        <img :src="image" inline lt-xs="hidden" size="lt-md:20 md:32" rounded-full b="4 white solid">
+        <img :src="image" inline lt-xs="hidden" size="lt-md:20 md:32" rounded-full b="4 white solid" shadow-sm>
       </div>
     </div>
     <div mt-4>
