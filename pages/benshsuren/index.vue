@@ -115,6 +115,7 @@
           <BasicFlow />
           <Wash />
           <Notes />
+          <Gossip />
         </div>
 
         <div mt-4>
@@ -132,6 +133,7 @@ import Cloth from './Cloth.vue'
 import BasicFlow from './BasicFlow.vue'
 import Wash from './Wash.vue'
 import Notes from './Notes.vue'
+import Gossip from './Gossip.vue'
 
 const images = ref<{
   src: string
