@@ -121,6 +121,10 @@
         <div mt-4>
           <BasicFlow />
         </div>
+
+        <div mt-4>
+          <Wash />
+        </div>
       </div>
     </div>
   </div>
