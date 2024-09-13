@@ -7,9 +7,13 @@
 
       <div flex items-center gap-4>
         <div font-italic text="lt-md:7 md:8 #638167">
-          <span relative before="content-empty absolute top-[-10%] right--2 lt-md:w-1px md:w-2px h-120% rotate-10 bg-[#638167]">
-            {{ props.prefix }}
-          </span>
+          <div relative>
+            <div>
+              {{ props.prefix }}
+            </div>
+
+            <div absolute top="-5%" right--2 lt-md:w-1px md:w-2px h="110%" rotate-10 bg="#638167" />
+          </div>
         </div>
 
         <div flex="~ col">
