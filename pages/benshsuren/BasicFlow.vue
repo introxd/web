@@ -3,10 +3,12 @@
     <div font-linhai text-5 flex="~ col" gap-4>
       <div flex gap-2>
         <Heart />
-        <div flex-1 text="#638167">
-          <div>甲 ：定期开团</div>
+        <div flex-1>
+          <div text="#a74e54">
+            甲 ：定期开团
+          </div>
 
-          <div text="4.3">
+          <div text="4.3 #638167">
             <div>① 确定开团团 （配色不限）</div>
             <div>② 限定件数开接龙</div>
             <div>③ 定金 10 元每件</div>
@@ -19,10 +21,12 @@
 
       <div flex gap-2>
         <Heart />
-        <div flex-1 text="#638167">
-          <div>乙 ：定制</div>
+        <div flex-1>
+          <div text="#a74e54">
+            乙 ：定制
+          </div>
 
-          <div text="4.3">
+          <div text="4.3 #638167">
             <div>① 交流绘画内容和位置</div>
             <div>② 出 1 ~ 2 个草图、配色并大体报价位</div>
             <div>③ 确定细稿</div>
@@ -34,8 +38,10 @@
 
       <div flex gap-2>
         <Heart />
-        <div flex-1 text="#638167">
-          <div>丙 ：有授权或约稿的来图定制</div>
+        <div flex-1>
+          <div text="#a74e54">
+            丙 ：有授权或约稿的来图定制
+          </div>
         </div>
       </div>
     </div>
