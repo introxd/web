@@ -1,5 +1,5 @@
 <template>
-  <div relative mt="lt-md:10 md:14" p-6 bg-white text="#638167" font-linhai rounded-sm shadow-sm>
+  <div relative mt="lt-md:10 md:14" p-6 bg-white text="4.5 #638167" font-linhai rounded-sm shadow-sm>
     <div absolute top="lt-md:-12 md:-14" left="50%" translate-x="-50%">
       <img :src="image" size="lt-md:24 md:28" rounded-full>
     </div>
@@ -13,8 +13,8 @@
         非科班出身，常年学习中，幸得大家喜爱接单几年，非全职接单
       </div>
 
-      <div flex gap-2>
-        <div i-material-symbols-check-rounded relative top-0 h-6 w-6 bg="#a74e54" />
+      <div flex gap-1>
+        <div i-material-symbols-check-rounded relative top="0.7" size-5 bg="#a74e54" />
         <div flex-1>
           <span>擅长传统国画和水彩风格，擅长花鸟鱼虫，可以古典建筑和小兽，可以写隶</span>
           <span font-sans>篆</span>
@@ -22,8 +22,8 @@
         </div>
       </div>
 
-      <div flex gap-2>
-        <div i-radix-icons-cross-2 relative top-0 h-6 w-6 bg="#a74e54" />
+      <div flex gap-1>
+        <div i-radix-icons-cross-2 relative top="0.7" size-5 bg="#a74e54" />
         <div flex-1>
           <span>不擅长的画风会拒绝，</span>
           <span underline="~ 1 offset-4 wavy #a74e54">不画和风、婉拒画满</span>
