@@ -117,6 +117,10 @@
         <div mt-4>
           <Cloth />
         </div>
+
+        <div mt-4>
+          <BasicFlow />
+        </div>
       </div>
     </div>
   </div>
@@ -126,6 +130,7 @@
 import Heart from './components/Heart.vue'
 import Drawing from './Drawing.vue'
 import Cloth from './Cloth.vue'
+import BasicFlow from './BasicFlow.vue'
 
 const images = ref<{
   src: string
