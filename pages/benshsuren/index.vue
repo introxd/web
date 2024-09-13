@@ -118,7 +118,7 @@
           <Gossip />
         </div>
 
-        <div mt-4>
+        <div my-4>
           <AccountsXiaoHongShu user="60be659f00000000010075b7" size="10" />
         </div>
       </div>
