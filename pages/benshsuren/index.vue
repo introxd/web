@@ -135,6 +135,7 @@ import Heart from './components/Heart.vue'
 import Drawing from './Drawing.vue'
 import Cloth from './Cloth.vue'
 import BasicFlow from './BasicFlow.vue'
+import Wash from './Wash.vue'
 
 const images = ref<{
   src: string
