@@ -125,6 +125,10 @@
         <div mt-4>
           <Wash />
         </div>
+
+        <div mt-4>
+          <Notes />
+        </div>
       </div>
     </div>
   </div>
@@ -136,6 +140,7 @@ import Drawing from './Drawing.vue'
 import Cloth from './Cloth.vue'
 import BasicFlow from './BasicFlow.vue'
 import Wash from './Wash.vue'
+import Notes from './Notes.vue'
 
 const images = ref<{
   src: string
