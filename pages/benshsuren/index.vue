@@ -119,7 +119,7 @@
         </div>
 
         <div mt-4>
-          <Notes />
+          <AccountsXiaoHongShu user="60be659f00000000010075b7" size="10" />
         </div>
       </div>
     </div>
