@@ -1,6 +1,10 @@
 <template>
-  <div relative mt-14 p-6 bg-white text="#638167" font-linhai rounded-sm shadow-sm>
-    <div mb-14 text="6 center" underline="~ 3 offset-26 #dbb577">
+  <div relative mt="lt-md:10 md:14" p-6 bg-white text="#638167" font-linhai rounded-sm shadow-sm>
+    <div absolute top="lt-md:-12 md:-14" left="50%" translate-x="-50%">
+      <img :src="image" size="lt-md:24 md:28" rounded-full>
+    </div>
+
+    <div mt="lt-md:10 md:14" mb-14 text="6 center" underline="~ 3 offset-26 #dbb577">
       碎碎念
     </div>
 
@@ -38,5 +42,5 @@
 </template>
 
 <script lang="ts" setup>
-import Heart from './components/Heart.vue'
+import image from '@/assets/images/benshsuren/gossip.png'
 </script>
