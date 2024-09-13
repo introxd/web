@@ -23,14 +23,14 @@
 
 <template>
   <div h-full w-full of-y-auto bg="#f4eddf">
-    <div v-show="!allReady" absolute ___ top-0 left-0 h-full w-full flex items-center justify-center>
+    <div v-show="!allReady" absolute top-0 left-0 h-full w-full flex items-center justify-center>
       <div fixed text-center font-linhai op-0 select-none>
         loading
       </div>
       <div i-line-md-loading-loop h-16 w-16 bg="#305f6f" />
     </div>
 
-    <div v-show="allReady" relative prose ma p-4>
+    <div v-show="allReady" relative prose ma py-4 px="lt-md:8 md:4">
       <!-- 定位元素 -->
       <div absolute top-20 right="lt-md:8 md:14" text="lt-md:8 md:10 #ede0cd" font-italic animate-fade-in>
         <div>AN HAO</div>
@@ -38,8 +38,8 @@
       </div>
 
       <div
-        v-show="currentIndex >= 2" absolute top-55 left="lt-md:60% md:50%" translate-x="-50%" font-linhai
-        text="lt-md:8 md:10 #305f6f" animate-fade-in
+        v-show="currentIndex >= 2" absolute top-55 left="lt-md:60% md:55%" translate-x="-50%" font-linhai
+        text="lt-xs:6 lt-md:10 md:12 #305f6f" animate-fade-in
       >
         <div>安好</div>
         <div>手绘</div>
