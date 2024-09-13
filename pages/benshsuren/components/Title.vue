@@ -6,7 +6,7 @@
       </div>
 
       <div flex items-center gap-4>
-        <div font-italic text="lt-md:7 md:8 #638167">
+        <div font-italic text="lt-md:8 md:10 #638167">
           <div relative>
             <div>
               {{ props.prefix }}
