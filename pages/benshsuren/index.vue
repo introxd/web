@@ -91,14 +91,14 @@
           </div>
 
           <div flex gap-2>
-            <div i-material-symbols-favorite-rounded relative top-1 h-6 w-6 animate="heart-beat count-infinite" bg="#a74e54" />
+            <Heart />
             <div flex-1 text="#638167">
               满百包车马普邮。具体根据绘画底布、绘画面积和绘画复杂程度来商定。
             </div>
           </div>
 
           <div flex gap-2>
-            <div i-material-symbols-favorite-rounded relative top-1 h-6 w-6 animate="heart-beat count-infinite" bg="#a74e54" />
+            <Heart />
             <div flex-1 text="#638167">
               <span>包括但不限于罗、絽等</span>
               <span underline="~ 1 offset-4 wavy #a74e54">织物结构暗纹有孔的</span>
@@ -123,6 +123,7 @@
 </template>
 
 <script lang="ts" setup>
+import Heart from './components/Heart.vue'
 import Drawing from './Drawing.vue'
 import Cloth from './Cloth.vue'
 

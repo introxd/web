@@ -43,7 +43,7 @@
       </div>
 
       <div flex gap-2>
-        <div i-material-symbols-favorite-rounded relative top-1 h-6 w-6 animate="heart-beat count-infinite" bg="#a74e54" />
+        <Heart />
         <div flex-1 text="#638167">
           对绘画有执念，要么不画要么画好，偶尔会有巧思。画风如图，婉拒暴发户审美。会对配色提出建议，但具体决定你说了算 ~
         </div>
@@ -53,6 +53,7 @@
 </template>
 
 <script lang="ts" setup>
+import Heart from './components/Heart.vue'
 import Title from './components/Title.vue'
 import image from '@/assets/images/benshsuren/drawing.png'
 </script>
