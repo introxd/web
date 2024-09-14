@@ -5,14 +5,14 @@
     </div>
 
     <div v-show="visible" relative w-full text-center animate-duration-330 animate-fade-in>
-      <div relative top--8 text="lt-sm:14 sm:20 xl:24">
+      <div relative top="lt-xs:-6 xs:-8 sm:-10" text="lt-xs:14 xs:16 sm:18 xl:24">
         <span font-nunito bg-clip-text text-transparent bg-gradient-to-tr from="#bd34fe" to="#47caff">
           Intro
         </span>
         <span>🤣</span>
       </div>
 
-      <div absolute top-30 left="50%" translate-x="-50%" w-full flex items-center gap-2>
+      <div absolute top="lt-xs:14 xs:18 sm:24 md:24 xl:32" left="50%" translate-x="-50%" w-full flex items-center gap-2>
         <div text="lt-sm:4 sm:5 xl:6" text-center w-full>
           <span>定制个人简介页面，类似</span>
           <button
