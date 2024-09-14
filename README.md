@@ -1,8 +1,8 @@
 <h1 align="center">Intro 🤣</h1>
 
-<pre align="center">Intro XD</pre>
+<p align="center"><sup>Intro XD</sup></p>
 
-<pre align="center">个人简介定制</pre>
+<p align="center">个人简介定制</p>
 
 ## 已完成简介
 
