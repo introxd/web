@@ -1,21 +1,27 @@
 <template>
-  <div v-show="visible" h-full flex="~ col" items-center justify-center animate="duration-330 fade-in">
-    <div relative text="lt-sm:14 sm:20 xl:24">
-      <span font-nunito bg-clip-text text-transparent bg-gradient-to-tr from="#bd34fe" to="#47caff">
-        Intro
-      </span>
-      <span>🤣</span>
+  <div relative h-full flex="~ col" items-center justify-center>
+    <div v-show="!visible" absolute top-0 left-0 h-full w-full flex items-center justify-center animate-fade-in>
+      <div i-line-md-loading-loop h-16 w-16 bg-gradient-to-tr from="#bd34fe" to="#47caff" />
     </div>
 
-    <div mt-4 text="lt-sm:4 sm:5 xl:6">
-      <span>定制个人简介页面，类似</span>
-      <button
-        ml-2 relative hover="bg-clip-text text-transparent bg-gradient-to-tr" from="#bd34fe" to="#47caff"
-        b="0 b dashed black hover:#bd34fe" active="scale-95" transition="transform"
-        @click="router.push('/imba97')"
-      >
-        imba97
-      </button>
+    <div v-show="visible" animate-duration-330 animate-fade-in>
+      <div relative text="lt-sm:14 sm:20 xl:24">
+        <span font-nunito bg-clip-text text-transparent bg-gradient-to-tr from="#bd34fe" to="#47caff">
+          Intro
+        </span>
+        <span>🤣</span>
+      </div>
+
+      <div mt-4 text="lt-sm:4 sm:5 xl:6">
+        <span>定制个人简介页面，类似</span>
+        <button
+          ml-2 relative hover="bg-clip-text text-transparent bg-gradient-to-tr" from="#bd34fe" to="#47caff"
+          b="0 b dashed black hover:#bd34fe" active="scale-95" transition="transform"
+          @click="router.push('/imba97')"
+        >
+          imba97
+        </button>
+      </div>
     </div>
 
     <Teleport to="body">
@@ -33,18 +39,11 @@ const router = useRouter()
 
 const visible = ref(false)
 
-const fontUrl = new URL('@/assets/fonts/Nunito-Medium.ttf', import.meta.url).href
-
-onNuxtReady(() => {
-  const fontFace = new FontFace('Nunito-Medium', `url(${fontUrl})`, {
-    style: 'normal',
-    weight: '500'
+onNuxtReady(async () => {
+  document.fonts.ready.then(() => {
+    setTimeout(() => {
+      visible.value = true
+    }, 500)
   })
-
-  fontFace.loaded.then(() => {
-    visible.value = true
-  })
-
-  fontFace.load()
 })
 </script>
