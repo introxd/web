@@ -4,22 +4,25 @@
       <div i-line-md-loading-loop h-16 w-16 bg-gradient-to-tr from="#bd34fe" to="#47caff" />
     </div>
 
-    <div v-show="visible" animate-duration-330 animate-fade-in>
-      <div relative text="lt-sm:14 sm:20 xl:24">
+    <div v-show="visible" relative w-full text-center animate-duration-330 animate-fade-in>
+      <div relative top--8 text="lt-sm:14 sm:20 xl:24">
         <span font-nunito bg-clip-text text-transparent bg-gradient-to-tr from="#bd34fe" to="#47caff">
           Intro
         </span>
         <span>🤣</span>
       </div>
 
-      <div mt-4 text="lt-sm:4 sm:5 xl:6">
-        <span>定制个人简介页面，类似</span>
-        <button
-          ml-2 relative hover="bg-clip-text text-transparent bg-gradient-to-tr" from="#bd34fe" to="#47caff"
-          b="0 b dashed black hover:#bd34fe" active="scale-95" transition="transform" @click="router.push('/imba97')"
-        >
-          imba97
-        </button>
+      <div absolute top-30 left="50%" translate-x="-50%" w-full flex items-center gap-2>
+        <div text="lt-sm:4 sm:5 xl:6" text-center w-full>
+          <span>定制个人简介页面，类似</span>
+          <button
+            ml-2 relative hover="bg-clip-text text-transparent bg-gradient-to-tr" from="#bd34fe" to="#47caff"
+            b="0 b dashed black hover:#bd34fe" active="scale-95" transition="transform"
+            @click="router.push(_get(user, 'path')!)"
+          >
+            {{ _get(user, 'name') }}
+          </button>
+        </div>
       </div>
     </div>
 
@@ -39,6 +42,10 @@ const appStore = useAppStore()
 
 const visible = ref(false)
 
+let usersData: User[] = []
+const users = ref<User[]>([])
+const user = ref<User | undefined>()
+
 onNuxtReady(async () => {
   // 首屏
   const env = await useEnv()
@@ -57,4 +64,15 @@ onNuxtReady(async () => {
     }, 500)
   })
 })
+
+onMounted(() => {
+  usersData = useUsers()
+  users.value = _cloneDeep(usersData)
+
+  randomUser()
+})
+
+function randomUser() {
+  user.value = _get(users.value, _random(0, usersData.length - 1))
+}
 </script>
