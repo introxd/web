@@ -14,7 +14,6 @@
     "lint": "eslint . --flag unstable_ts_config"
   },
   "dependencies": {
-    "@pinia/nuxt": "^0.5.4",
     "canvas-confetti": "^1.9.3",
     "nuxt": "^3.13.0",
     "vue": "latest"
@@ -22,6 +21,7 @@
   "devDependencies": {
     "@iconify/json": "^2.2.244",
     "@imba97/eslint-config": "^0.0.3",
+    "@pinia/nuxt": "^0.5.4",
     "@types/canvas-confetti": "^1.6.4",
     "@types/lodash-es": "^4.17.12",
     "@unocss/nuxt": "^0.62.3",
