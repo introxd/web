@@ -40,6 +40,14 @@ const router = useRouter()
 const visible = ref(false)
 
 onNuxtReady(async () => {
+  // 首屏
+  const firstScreen = await useFetch('/api/getFirstScreen')
+
+  if (!_isEmpty(firstScreen.data.value)) {
+    router.push(`/${firstScreen.data.value}`)
+    return
+  }
+
   document.fonts.ready.then(() => {
     setTimeout(() => {
       visible.value = true
