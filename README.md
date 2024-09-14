@@ -1,75 +1,18 @@
-# Nuxt 3 Minimal Starter
+<h1 align="center">Intro 🤣</h1>
 
-Look at the [Nuxt 3 documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
+<p align="center" style="color: gray;">Intro XD</p>
 
-## Setup
+<p align="center" style="color: gray;">个人简介定制</p>
 
-Make sure to install the dependencies:
+## 已完成简介
 
-```bash
-# npm
-npm install
+- [imba97](https://introxd.com/imba97)
+- [benshsuren](https://introxd.com/benshsuren)
 
-# pnpm
-pnpm install
+## Docker
 
-# yarn
-yarn install
+配置了 `Docker`，可以自行部署，通过环境变量来设置首页的简介
 
-# bun
-bun install
+```dotenv
+FIRST_SCREEN=imba97
 ```
-
-## Development Server
-
-Start the development server on `http://localhost:3000`:
-
-```bash
-# npm
-npm run dev
-
-# pnpm
-pnpm run dev
-
-# yarn
-yarn dev
-
-# bun
-bun run dev
-```
-
-## Production
-
-Build the application for production:
-
-```bash
-# npm
-npm run build
-
-# pnpm
-pnpm run build
-
-# yarn
-yarn build
-
-# bun
-bun run build
-```
-
-Locally preview production build:
-
-```bash
-# npm
-npm run preview
-
-# pnpm
-pnpm run preview
-
-# yarn
-yarn preview
-
-# bun
-bun run preview
-```
-
-Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
