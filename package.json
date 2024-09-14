@@ -14,6 +14,7 @@
     "lint": "eslint . --flag unstable_ts_config"
   },
   "dependencies": {
+    "@pinia/nuxt": "^0.5.4",
     "canvas-confetti": "^1.9.3",
     "nuxt": "^3.13.0",
     "vue": "latest"

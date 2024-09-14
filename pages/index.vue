@@ -16,8 +16,7 @@
         <span>定制个人简介页面，类似</span>
         <button
           ml-2 relative hover="bg-clip-text text-transparent bg-gradient-to-tr" from="#bd34fe" to="#47caff"
-          b="0 b dashed black hover:#bd34fe" active="scale-95" transition="transform"
-          @click="router.push('/imba97')"
+          b="0 b dashed black hover:#bd34fe" active="scale-95" transition="transform" @click="router.push('/imba97')"
         >
           imba97
         </button>
@@ -36,18 +35,22 @@
 const { version } = usePackage()
 
 const router = useRouter()
+const appStore = useAppStore()
 
 const visible = ref(false)
 
 onNuxtReady(async () => {
   // 首屏
-  const firstScreen = await useFetch('/api/getFirstScreen')
+  const env = await useEnv()
 
-  if (!_isEmpty(firstScreen.data.value)) {
-    router.push(`/${firstScreen.data.value}`)
+  // 首屏跳转只执行一次
+  if (!appStore.firstScreenOnce && !_isEmpty(env.FIRST_SCREEN)) {
+    appStore.firstScreenOnce = true
+    router.push(`/${env.FIRST_SCREEN}`)
     return
   }
 
+  // 字体
   document.fonts.ready.then(() => {
     setTimeout(() => {
       visible.value = true

@@ -1,8 +1,8 @@
 <h1 align="center">Intro 🤣</h1>
 
-<p align="center" style="color: gray;">Intro XD</p>
+<pre align="center">Intro XD</pre>
 
-<p align="center" style="color: gray;">个人简介定制</p>
+<pre align="center">个人简介定制</pre>
 
 ## 已完成简介
 
