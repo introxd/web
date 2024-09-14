@@ -6,8 +6,9 @@
         <div flex-1 text="#638167">
           <span>手绘颜料为丝绸纺织颜料 + 纺织颜料 + 丙</span>
           <span font-sans>烯</span>
-          <span>混用</span>
-          <span>不能长时间浸泡和反复搓洗及高温熨烫，无其他注意事项，根据衣服底布护理就好</span>
+          <span>混用，不能长时间浸泡和反复搓洗及高温</span>
+          <span font-sans>熨</span>
+          <span>烫，无其他注意事项，根据衣服底布护理就好</span>
         </div>
       </div>
     </div>
