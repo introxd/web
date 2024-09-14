@@ -162,6 +162,7 @@ onMounted(async () => {
 
   setTimeout(() => {
     ready.font = true
+    ready.image = true
   }, 10000)
 })
 
