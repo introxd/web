@@ -2,6 +2,8 @@
 export default defineNuxtConfig({
   devtools: { enabled: false },
 
+  debug: true,
+
   modules: [
     '@vueuse/nuxt',
     '@unocss/nuxt',
@@ -28,6 +30,10 @@ export default defineNuxtConfig({
       'composables/**/use*.ts',
       'enums/**'
     ]
+  },
+
+  hub: {
+    kv: true
   },
 
   devServer: {
