@@ -2,8 +2,6 @@
 export default defineNuxtConfig({
   devtools: { enabled: false },
 
-  debug: true,
-
   modules: [
     '@vueuse/nuxt',
     '@unocss/nuxt',
@@ -34,6 +32,16 @@ export default defineNuxtConfig({
 
   hub: {
     kv: true
+  },
+
+  vite: {
+    css: {
+      preprocessorOptions: {
+        scss: {
+          silenceDeprecations: ['legacy-js-api']
+        }
+      }
+    }
   },
 
   devServer: {
