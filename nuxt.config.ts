@@ -5,7 +5,8 @@ export default defineNuxtConfig({
   modules: [
     '@vueuse/nuxt',
     '@unocss/nuxt',
-    '@pinia/nuxt'
+    '@pinia/nuxt',
+    '@nuxthub/core'
   ],
 
   unocss: {
