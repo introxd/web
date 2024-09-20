@@ -16,7 +16,7 @@
         <div flex items-center justify-center gap-2 text="lt-sm:4 sm:5 xl:6" text-center w-full>
           <span>定制个人简介页面，类似</span>
           <button
-            ml-2 relative hover="bg-clip-text text-transparent bg-gradient-to-tr" from="#bd34fe" to="#47caff"
+            relative hover="bg-clip-text text-transparent bg-gradient-to-tr" from="#bd34fe" to="#47caff"
             b="0 b dashed black hover:#bd34fe" active="scale-95" transition="transform"
             @click="router.push(currentUser.path)"
           >
