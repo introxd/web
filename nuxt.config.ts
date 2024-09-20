@@ -34,8 +34,6 @@ export default defineNuxtConfig({
     kv: true
   },
 
-  debug: true,
-
   vite: {
     css: {
       preprocessorOptions: {
