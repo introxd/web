@@ -68,7 +68,7 @@ jobs:
 
       # Step 7: Deploy with NuxtHub
       - name: Deploy with nuxthub
-        run: npx nuxthub deploy
+        run: npx nuxthub deploy --no-build
         env:
           NUXT_HUB_PROJECT_KEY: ${{ secrets.NUXT_HUB_PROJECT_KEY }}
           NUXT_HUB_USER_TOKEN: ${{ secrets.NUXT_HUB_USER_TOKEN }}
