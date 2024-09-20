@@ -18,9 +18,9 @@
           <button
             ml-2 relative hover="bg-clip-text text-transparent bg-gradient-to-tr" from="#bd34fe" to="#47caff"
             b="0 b dashed black hover:#bd34fe" active="scale-95" transition="transform"
-            @click="router.push(_get(user, 'path')!)"
+            @click="router.push(currentUser.path)"
           >
-            {{ _get(user, 'name') }}
+            {{ currentUser.name }}
           </button>
         </div>
       </div>
@@ -45,6 +45,11 @@ const visible = ref(false)
 let usersData: User[] = []
 const users = ref<User[]>([])
 const user = ref<User | undefined>()
+
+const currentUser = computed(() => ({
+  name: _get(user.value, 'name', ''),
+  path: _get(user.value, 'path', '')
+}))
 
 onNuxtReady(async () => {
   // 首屏
