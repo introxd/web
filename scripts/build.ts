@@ -3,10 +3,15 @@ import { spawn } from 'node:child_process'
 
 const child = spawn('npx', ['nuxi', 'build'])
 
+const successCondition = [
+  'npx nuxthub deploy',
+  'You can preview this build using'
+]
+
 child.stdout.on('data', (data) => {
   process.stdout.write(data)
 
-  if (!~data.indexOf('npx nuxthub deploy')) {
+  if (!successCondition.some(condition => data.toString().includes(condition))) {
     return
   }
 
