@@ -13,11 +13,11 @@ RUN npm install -g pnpm
 # 安装项目依赖
 RUN pnpm install
 
-# 构建 Nuxt.js 应用程序
-RUN pnpm run build
-
 # Cloudflare Workers 部署模式
 ENV CLOUDFLARE_MODE=false
+
+# 构建 Nuxt.js 应用程序
+RUN pnpm build
 
 # 暴露端口（默认端口为 3000，可以通过环境变量 NUXT_PORT 配置）
 ENV NUXT_PORT=3000
