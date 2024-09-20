@@ -105,6 +105,10 @@ function randomUser() {
 }
 
 function refresh() {
+  if (refreshClicked.value) {
+    return
+  }
+
   refreshClicked.value = true
 
   setTimeout(() => {
