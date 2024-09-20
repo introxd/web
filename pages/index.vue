@@ -13,7 +13,7 @@
       </div>
 
       <div absolute top="lt-xs:14 xs:18 sm:24 md:24 xl:32" left="50%" translate-x="-50%" w-full flex items-center gap-2>
-        <div text="lt-sm:4 sm:5 xl:6" text-center w-full>
+        <div flex items-center justify-center gap-2 text="lt-sm:4 sm:5 xl:6" text-center w-full>
           <span>定制个人简介页面，类似</span>
           <button
             ml-2 relative hover="bg-clip-text text-transparent bg-gradient-to-tr" from="#bd34fe" to="#47caff"
@@ -22,6 +22,10 @@
           >
             {{ currentUser.name }}
           </button>
+          <div
+            i-material-symbols-light-directory-sync-rounded size-8 bg-gray-3 active="scale-95" transition="transform"
+            cursor-pointer :class="refreshClicked ? 'animate-spin animate-count-1' : ''" @click="refresh"
+          />
         </div>
       </div>
     </div>
@@ -42,7 +46,11 @@ const appStore = useAppStore()
 
 const visible = ref(false)
 
+const refreshClicked = ref(false)
+
 let usersData: User[] = []
+let randomUserPool: User[] = []
+
 const users = ref<User[]>([])
 const user = ref<User | undefined>()
 
@@ -73,11 +81,35 @@ onNuxtReady(async () => {
 onMounted(() => {
   usersData = useUsers()
   users.value = _cloneDeep(usersData)
+  randomUserPool = _cloneDeep(usersData)
 
   randomUser()
 })
 
 function randomUser() {
-  user.value = _get(users.value, _random(0, usersData.length - 1))
+  if (_isEmpty(randomUserPool)) {
+    randomUserPool = _cloneDeep(usersData)
+
+    // 删除当前用户
+    _remove(randomUserPool, { name: currentUser.value.name })
+  }
+
+  // 随机用户
+  const index = _random(0, randomUserPool.length - 1)
+
+  const [random] = _remove(randomUserPool, {
+    name: randomUserPool[index].name
+  })
+
+  user.value = random
+}
+
+function refresh() {
+  refreshClicked.value = true
+
+  setTimeout(() => {
+    refreshClicked.value = false
+    randomUser()
+  }, 800)
 }
 </script>
