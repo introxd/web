@@ -4,7 +4,7 @@
       <div i-line-md-loading-loop h-16 w-16 bg-gradient-to-tr from="#bd34fe" to="#47caff" />
     </div>
 
-    <div v-show="visible" relative w-full text-center animate-duration-330 animate-fade-in>
+    <div v-show="visible" relative w-full text-center animate-duration-330 animate-fade-in select-none>
       <div relative top="lt-xs:-6 xs:-8 sm:-10" text="lt-xs:14 xs:16 sm:18 xl:24">
         <span font-nunito bg-clip-text text-transparent bg-gradient-to-tr from="#bd34fe" to="#47caff">
           Intro
