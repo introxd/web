@@ -1,4 +1,7 @@
-// https://nuxt.com/docs/api/configuration/nuxt-config
+import process from 'node:process'
+
+const isCloudflareMode = process.env.CLOUDFLARE_MODE !== 'false'
+
 export default defineNuxtConfig({
   devtools: { enabled: false },
 
@@ -6,7 +9,7 @@ export default defineNuxtConfig({
     '@vueuse/nuxt',
     '@unocss/nuxt',
     '@pinia/nuxt',
-    '@nuxthub/core'
+    ...(isCloudflareMode ? ['@nuxthub/core'] : [])
   ],
 
   unocss: {
@@ -30,9 +33,17 @@ export default defineNuxtConfig({
     ]
   },
 
-  hub: {
-    kv: true
-  },
+  ...(isCloudflareMode
+    ? {
+        hub: {
+          kv: true
+        }
+      }
+    : {
+        nitro: {
+          preset: 'node-server'
+        }
+      }),
 
   vite: {
     css: {
