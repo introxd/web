@@ -48,8 +48,5 @@ export default defineNuxtConfig({
     host: '0.0.0.0'
   },
 
-  compatibilityDate: '2024-07-25',
-  future: {
-    compatibilityVersion: 4
-  }
+  compatibilityDate: '2024-07-30'
 })
