@@ -1,7 +1,7 @@
 import process from 'node:process'
 import { spawn } from 'node:child_process'
 
-const child = spawn('npx', ['nuxthub', 'deploy', '--no-build'], {
+const child = spawn('npx nuxthub deploy --no-build', {
   env: {
     CLOUDFLARE_MODE: 'true',
     NUXT_HUB_PROJECT_KEY: process.env.NUXT_HUB_PROJECT_KEY,
@@ -9,4 +9,6 @@ const child = spawn('npx', ['nuxthub', 'deploy', '--no-build'], {
   }
 })
 
-child.stdout.pipe(process.stdout)
+child.stdout.on('data', (data) => {
+  process.stdout.write(data)
+})
