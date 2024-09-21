@@ -5,7 +5,7 @@ const child = spawn('npx', ['nuxi', 'build'])
 
 const successCondition = [
   'npx nuxthub deploy',
-  'You can preview this build using'
+  'node .output/server/index.mjs'
 ]
 
 child.stdout.on('data', (data) => {
