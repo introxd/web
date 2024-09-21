@@ -48,12 +48,13 @@ jobs:
         run: pnpm build
 
       # Step 6: Deploy with NuxtHub
-      - name: Deploy with nuxthub
+      - name: Deploy to NuxtHub
+        env:
+          NUXT_HUB_PROJECT_KEY: ${{ secrets.NUXT_HUB_PROJECT_KEY }}
+          NUXT_HUB_USER_TOKEN: ${{ secrets.NUXT_HUB_USER_TOKEN }}
         run: |
-          echo "NUXT_HUB_PROJECT_KEY=${{ secrets.NUXT_HUB_PROJECT_KEY }}" >> $GITHUB_ENV
-          echo "NUXT_HUB_USER_TOKEN=${{ secrets.NUXT_HUB_USER_TOKEN }}" >> $GITHUB_ENV
           pnpm test-deploy
-          npx nuxthub deploy --no-build
+          npx nuxthub deploy
 
       # Step 7: Docker login and image build/tag/push
       - name: Log in to Docker Hub
