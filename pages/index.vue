@@ -1,5 +1,35 @@
+<style lang="scss" scoped>
+.gradient {
+  &.hide {
+    --size: 0;
+    opacity: 0;
+  }
+
+  --size: 750px;
+  --speed: 9s;
+  --easing: cubic-bezier(0.8, 0.2, 0.2, 0.8);
+
+  --uno: animate-spin animate-count-infinite animate-alternate;
+
+  width: var(--size);
+  height: var(--size);
+  filter: blur(calc(var(--size) / 5));
+  background-image: linear-gradient(#e0c3fc, #a0d8ff);
+  animation: var(--speed) var(--easing);
+  border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
+  opacity: 0.75;
+  transition: all 0.5s ease-out;
+}
+
+@media (min-width: 720px) {
+  .gradient {
+    --size: 550px;
+  }
+}
+</style>
+
 <template>
-  <div relative h-full flex="~ col" items-center justify-center>
+  <div relative h-full flex="~ col" items-center justify-center z-10>
     <div v-show="!visible" absolute top-0 left-0 h-full w-full flex items-center justify-center animate-fade-in>
       <div i-line-md-loading-loop h-16 w-16 bg-gradient-to-tr from="#bd34fe" to="#47caff" />
     </div>
@@ -12,23 +42,33 @@
         <span>🤣</span>
       </div>
 
-      <div absolute top="lt-xs:14 xs:18 sm:24 md:24 xl:32" left="50%" translate-x="-50%" w-full flex items-center gap-2>
-        <div flex items-center justify-center gap-2 text="lt-sm:4 sm:5 xl:6" text-center w-full>
+      <div
+        absolute top="lt-xs:14 xs:18 sm:24 md:24 xl:32" left="50%" translate-x="-50%" w-full flex items-center
+        gap-2
+      >
+        <div flex items-center justify-center gap-2 text="lt-sm:4 sm:5 xl:6 dark-1" text-center w-full>
           <span>定制个人简介页面，类似</span>
           <button
             relative hover="bg-clip-text text-transparent bg-gradient-to-tr" from="#bd34fe" to="#47caff"
-            b="0 b dashed black hover:#bd34fe" active="scale-95" transition="transform"
+            b="0 b dashed dark-1 hover:#bd34fe" active="scale-95" transition="transform"
             @click="router.push(currentUser.path)"
           >
             {{ currentUser.name }}
           </button>
           <div
-            i-material-symbols-light-directory-sync-rounded size-8 bg-gray-3 active="scale-95" transition="transform"
-            cursor-pointer :class="refreshClicked ? 'animate-spin animate-count-1' : ''" @click="refresh"
+            i-material-symbols-light-directory-sync-rounded size-8 bg-dark-1 active="scale-95"
+            transition="transform" cursor-pointer :class="refreshClicked ? 'animate-spin animate-count-1' : ''"
+            @click="refresh"
           />
         </div>
       </div>
     </div>
+
+    <Teleport to="body">
+      <div fixed top-0 left-0 h-full w-full flex items-center justify-center z-1>
+        <div class="gradient" :class="!visible ? 'hide' : ''" />
+      </div>
+    </Teleport>
 
     <Teleport to="body">
       <div fixed right-2 bottom-1 text="3 gray-3">
