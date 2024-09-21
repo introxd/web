@@ -9,7 +9,6 @@
     "p": "nuxt prepare",
     "dev": "nuxt dev --dotenv .env.local",
     "build": "esno scripts/build.ts",
-    "test-deploy": "esno scripts/deploy.ts",
     "start-docker": "nuxt start --hostname 0.0.0.0 --port $NUXT_PORT",
     "release": "bumpp",
     "lint": "eslint . --flag unstable_ts_config"
@@ -32,7 +31,6 @@
     "eslint": "9.9.0",
     "eslint-plugin-unused-imports": "^4.1.4",
     "esno": "^4.7.0",
-    "execa": "^9.4.0",
     "lodash-es": "^4.17.21",
     "sass-embedded": "^1.79.1",
     "typescript": "^5.6.2",
