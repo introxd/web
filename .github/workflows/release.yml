@@ -50,5 +50,14 @@ jobs:
       # 调试步骤：输出环境变量
       - name: Debug environment variables
         run: |
-          echo "NUXT_HUB_PROJECT_KEY=${{ secrets.NUXT_HUB_PROJECT_KEY }}"
-          echo "NUXT_HUB_USER_TOKEN=${{ secrets.NUXT_HUB_USER_TOKEN }}"
+          if [ -z "${{ secrets.NUXT_HUB_PROJECT_KEY }}" ]; then
+            echo "NUXT_HUB_PROJECT_KEY is empty: true"
+          else
+            echo "NUXT_HUB_PROJECT_KEY is empty: false"
+          fi
+
+          if [ -z "${{ secrets.NUXT_HUB_USER_TOKEN }}" ]; then
+            echo "NUXT_HUB_USER_TOKEN is empty: true"
+          else
+            echo "NUXT_HUB_USER_TOKEN is empty: false"
+          fi
