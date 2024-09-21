@@ -53,6 +53,7 @@ jobs:
         env:
           NUXT_HUB_PROJECT_KEY: ${{ secrets.NUXT_HUB_PROJECT_KEY }}
           NUXT_HUB_USER_TOKEN: ${{ secrets.NUXT_HUB_USER_TOKEN }}
+        continue-on-error: true
 
       # Step 7: Docker login and image build/tag/push
       - name: Log in to Docker Hub
