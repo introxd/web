@@ -51,7 +51,7 @@
             {{ currentUser.name }}
           </button>
           <div
-            i-material-symbols-light-directory-sync-rounded size-8 bg-dark-1 active="scale-95" transition="transform"
+            i-material-symbols-light-directory-sync-rounded size-8 bg-gray active="scale-95" transition="transform"
             cursor-pointer :class="refreshClicked ? 'animate-spin animate-count-1' : ''" @click="refresh"
           />
         </div>
