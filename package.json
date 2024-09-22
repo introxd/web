@@ -32,6 +32,7 @@
     "eslint-plugin-unused-imports": "^4.1.4",
     "esno": "^4.7.0",
     "lodash-es": "^4.17.21",
+    "nuxthub": "^0.6.1",
     "sass-embedded": "^1.79.1",
     "typescript": "^5.6.2",
     "unimport": "^3.12.0",
