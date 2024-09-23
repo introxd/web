@@ -12,7 +12,7 @@ export const $api = ofetch.create({
     options.headers = options.headers || {}
     console.log('token')
     // console.log('loadUserConfig().hub?.userToken', loadUserConfig().hub?.userToken)
-    console.log('process.env.NUXT_HUB_USER_TOKEN', process.env.NUXT_HUB_USER_TOKEN)
+    // console.log('process.env.NUXT_HUB_USER_TOKEN', process.env.NUXT_HUB_USER_TOKEN)
     if (!options.headers.Authorization) {
       options.headers.Authorization = `Bearer ${loadUserConfig().hub?.userToken || process.env.NUXT_HUB_USER_TOKEN || ''}`
     }
