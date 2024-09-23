@@ -11,7 +11,8 @@ export const $api = ofetch.create({
   onRequest({ options }) {
     options.headers = options.headers || {}
     console.log('token')
-    console.log(`Bearer ${loadUserConfig().hub?.userToken || process.env.NUXT_HUB_USER_TOKEN || ''}`)
+    console.log('loadUserConfig().hub?.userToken', loadUserConfig().hub?.userToken)
+    console.log('process.env.NUXT_HUB_USER_TOKEN', process.env.NUXT_HUB_USER_TOKEN)
     if (!options.headers.Authorization) {
       options.headers.Authorization = `Bearer ${loadUserConfig().hub?.userToken || process.env.NUXT_HUB_USER_TOKEN || ''}`
     }
@@ -24,9 +25,9 @@ export const $api = ofetch.create({
 })
 
 export function fetchUser() {
-  console.log('NUXT_HUB_USER_TOKEN', process.env.NUXT_HUB_USER_TOKEN)
-  console.log('env', process.env)
-  if (!loadUserConfig().hub?.userToken && !process.env.NUXT_HUB_USER_TOKEN) {
+  const condition = !loadUserConfig().hub?.userToken && !process.env.NUXT_HUB_USER_TOKEN
+  console.log('condition', condition)
+  if (condition) {
     return null
   }
   return $api('/user').catch(() => {
