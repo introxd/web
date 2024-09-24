@@ -27,12 +27,15 @@
 </style>
 
 <template>
-  <div relative h-full flex="~ col" items-center justify-center z-10>
+  <div relative h-full flex="~ col" items-center justify-center z-10 select-none>
     <div v-show="!visible" absolute top-0 left-0 h-full w-full flex items-center justify-center animate-fade-in>
       <div i-line-md-loading-loop h-16 w-16 bg-gradient-to-tr from="#bd34fe" to="#47caff" />
+      <div font-nunito op-0>
+        loading
+      </div>
     </div>
 
-    <div :class="visible ? 'op-100' : 'op-0'" relative w-full text-center animate-duration-330 animate-fade-in select-none>
+    <div v-show="visible" relative w-full text-center animate-duration-330 animate-fade-in>
       <div relative top="lt-xs:-6 xs:-8 sm:-10" text="lt-xs:14 xs:16 sm:18 xl:24">
         <span font-nunito bg-clip-text text-transparent bg-gradient-to-tr from="#bd34fe" to="#47caff">
           Intro
@@ -113,6 +116,8 @@ onNuxtReady(async () => {
 })
 
 onMounted(() => {
+  visible.value = false
+
   usersData = useUsers()
   users.value = _cloneDeep(usersData)
   randomUserPool = _cloneDeep(usersData)
