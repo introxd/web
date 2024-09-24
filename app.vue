@@ -33,6 +33,16 @@ watch(() => route.path, () => {
 
 useHead({
   title: 'Intro 🤣',
+  meta: [
+    {
+      name: 'keywords',
+      content: 'introxd,intro🤣,🤣,introduction,personal,profile,定制,简介,个人简介'
+    },
+    {
+      name: 'description',
+      content: 'Personal Profile Website, 个人简介网站, Intro 🤣'
+    }
+  ],
   htmlAttrs: {
     lang: 'zh'
   },
