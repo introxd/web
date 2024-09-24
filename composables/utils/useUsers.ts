@@ -3,6 +3,10 @@ export interface User {
   path: string
 }
 
+export const excludeUsers: string[] = [
+  'more'
+]
+
 export default function () {
   const users: User[] = []
 
@@ -10,9 +14,11 @@ export default function () {
   const routers = router.getRoutes()
 
   _forEach(routers, (route) => {
-    if (/^\/\w+$/.test(route.path)) {
+    const name = route.name as string
+
+    if (/^\/\w+$/.test(route.path) && !_includes(excludeUsers, name)) {
       users.push({
-        name: route.name as string,
+        name,
         path: route.path
       })
     }
