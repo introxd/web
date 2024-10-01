@@ -12,10 +12,6 @@ export default defineNuxtConfig({
     ...(isCloudflareMode ? ['@nuxthub/core'] : [])
   ],
 
-  unocss: {
-    autoImport: false
-  },
-
   lodash: {
     prefix: '_',
     prefixSkip: false,
