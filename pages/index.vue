@@ -59,6 +59,16 @@
           />
         </div>
       </div>
+
+      <div
+        mt-8 flex items-center justify-center active="scale-95" transition="transform" cursor-pointer
+        @click="router.push('/more')"
+      >
+        <div text-dark-1 font-bold>
+          详情
+        </div>
+        <div i-material-symbols-arrow-right-rounded size-6 bg-dark-1 />
+      </div>
     </div>
 
     <Teleport to="body">
