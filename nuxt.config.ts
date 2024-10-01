@@ -1,5 +1,8 @@
 import process from 'node:process'
 
+import components from 'unplugin-vue-components/vite'
+import IntroxdResolver from '@introxd/components/resolver'
+
 const isCloudflareMode = process.env.CLOUDFLARE_MODE !== 'false'
 
 export default defineNuxtConfig({
@@ -42,6 +45,14 @@ export default defineNuxtConfig({
       }),
 
   vite: {
+    plugins: [
+      components({
+        resolvers: [
+          IntroxdResolver()
+        ]
+      })
+    ],
+
     css: {
       preprocessorOptions: {
         scss: {

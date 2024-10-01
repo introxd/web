@@ -8,6 +8,9 @@ importers:
 
   .:
     dependencies:
+      '@introxd/components':
+        specifier: ^0.0.1
+        version: 0.0.1
       canvas-confetti:
         specifier: ^1.9.3
         version: 1.9.3
@@ -42,6 +45,9 @@ importers:
       '@unocss/nuxt':
         specifier: ^0.62.4
         version: 0.62.4(magicast@0.3.5)(postcss@8.4.47)(rollup@4.21.2)(vite@5.4.6(@types/node@22.5.3)(sass-embedded@1.79.1)(terser@5.31.6))(webpack-sources@3.2.3)(webpack@5.94.0(esbuild@0.17.19))
+      '@unocss/reset':
+        specifier: ^0.62.4
+        version: 0.62.4
       '@vueuse/nuxt':
         specifier: ^11.1.0
         version: 11.1.0(magicast@0.3.5)(nuxt@3.13.2(@parcel/watcher@2.4.1)(@types/node@22.5.3)(eslint@9.9.0(jiti@1.21.6))(ioredis@5.4.1)(magicast@0.3.5)(optionator@0.9.4)(rollup@4.21.2)(sass-embedded@1.79.1)(terser@5.31.6)(typescript@5.6.2)(vite@5.4.6(@types/node@22.5.3)(sass-embedded@1.79.1)(terser@5.31.6))(webpack-sources@3.2.3))(rollup@4.21.2)(vue@3.5.0(typescript@5.6.2))(webpack-sources@3.2.3)
@@ -78,6 +84,9 @@ importers:
       unocss:
         specifier: ^0.62.4
         version: 0.62.4(@unocss/webpack@0.62.4(rollup@4.21.2)(webpack@5.94.0(esbuild@0.17.19)))(postcss@8.4.47)(rollup@4.21.2)(vite@5.4.6(@types/node@22.5.3)(sass-embedded@1.79.1)(terser@5.31.6))
+      unplugin-vue-components:
+        specifier: ^0.27.4
+        version: 0.27.4(@babel/parser@7.25.6)(@nuxt/kit@3.13.2(magicast@0.3.5)(rollup@4.21.2)(webpack-sources@3.2.3))(rollup@4.21.2)(vue@3.5.0(typescript@5.6.2))(webpack-sources@3.2.3)
       wrangler:
         specifier: ^3.78.5
         version: 3.78.5(@cloudflare/workers-types@4.20240909.0)
@@ -973,6 +982,9 @@ packages:
 
   '@imba97/eslint-config@0.0.3':
     resolution: {integrity: sha512-xZSmRJ3Cd2YOOyqq0Mns1QpxX2fJXFAcXlivMmr68fvfhR/Xy8HcP04l88g6y22eHD7y57+jChlYRP4Ulxp9vg==}
+
+  '@introxd/components@0.0.1':
+    resolution: {integrity: sha512-ZxgzHXKl3+12UmYhATXtF3gtmsxEWx7MGLMThihfEQHAldn2I0KIweSHFJwMNTNYUI5xIbUm843vSJsUMXIwNw==}
 
   '@ioredis/commands@1.2.0':
     resolution: {integrity: sha512-Sx1pU8EM64o2BrqNpEO1CNLtKQwyhuXuqyfH7oGKCk+1a33d2r5saW8zNwm3j6BTExtjrv2BxTgzzkMwts6vGg==}
@@ -4798,6 +4810,19 @@ packages:
       vite:
         optional: true
 
+  unplugin-vue-components@0.27.4:
+    resolution: {integrity: sha512-1XVl5iXG7P1UrOMnaj2ogYa5YTq8aoh5jwDPQhemwO/OrXW+lPQKDXd1hMz15qxQPxgb/XXlbgo3HQ2rLEbmXQ==}
+    engines: {node: '>=14'}
+    peerDependencies:
+      '@babel/parser': ^7.15.8
+      '@nuxt/kit': ^3.2.2
+      vue: 2 || 3
+    peerDependenciesMeta:
+      '@babel/parser':
+        optional: true
+      '@nuxt/kit':
+        optional: true
+
   unplugin-vue-router@0.10.8:
     resolution: {integrity: sha512-xi+eLweYAqolIoTRSmumbi6Yx0z5M0PLvl+NFNVWHJgmE2ByJG1SZbrn+TqyuDtIyln20KKgq8tqmL7aLoiFjw==}
     peerDependencies:
@@ -5910,6 +5935,8 @@ snapshots:
       - svelte-eslint-parser
       - typescript
       - vitest
+
+  '@introxd/components@0.0.1': {}
 
   '@ioredis/commands@1.2.0': {}
 
@@ -10532,6 +10559,27 @@ snapshots:
       - postcss
       - rollup
       - supports-color
+
+  unplugin-vue-components@0.27.4(@babel/parser@7.25.6)(@nuxt/kit@3.13.2(magicast@0.3.5)(rollup@4.21.2)(webpack-sources@3.2.3))(rollup@4.21.2)(vue@3.5.0(typescript@5.6.2))(webpack-sources@3.2.3):
+    dependencies:
+      '@antfu/utils': 0.7.10
+      '@rollup/pluginutils': 5.1.0(rollup@4.21.2)
+      chokidar: 3.6.0
+      debug: 4.3.6
+      fast-glob: 3.3.2
+      local-pkg: 0.5.0
+      magic-string: 0.30.11
+      minimatch: 9.0.5
+      mlly: 1.7.1
+      unplugin: 1.14.1(webpack-sources@3.2.3)
+      vue: 3.5.0(typescript@5.6.2)
+    optionalDependencies:
+      '@babel/parser': 7.25.6
+      '@nuxt/kit': 3.13.2(magicast@0.3.5)(rollup@4.21.2)(webpack-sources@3.2.3)
+    transitivePeerDependencies:
+      - rollup
+      - supports-color
+      - webpack-sources
 
   unplugin-vue-router@0.10.8(rollup@4.21.2)(vue-router@4.4.5(vue@3.5.6(typescript@5.6.2)))(vue@3.5.6(typescript@5.6.2))(webpack-sources@3.2.3):
     dependencies:
