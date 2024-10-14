@@ -48,14 +48,13 @@
           <span>定制个人简介页面，类似</span>
           <button
             relative hover="bg-clip-text text-transparent bg-gradient-to-tr" from="#bd34fe" to="#47caff"
-            b="0 b dashed dark-1 hover:#bd34fe" active="scale-95" transition="transform"
-            @click="router.push(currentUser.path)"
+            b="0 b dashed dark-1 hover:#bd34fe" clickable @click="router.push(currentUser.path)"
           >
             {{ currentUser.name }}
           </button>
           <div
-            i-material-symbols-light-directory-sync-rounded size-8 bg-gray active="scale-95" transition="transform"
-            cursor-pointer :class="refreshClicked ? 'animate-spin animate-count-1' : ''" @click="refresh"
+            i-material-symbols-light-directory-sync-rounded size-8 bg-gray clickable
+            :class="refreshClicked ? 'animate-spin animate-count-1' : ''" @click="refresh"
           />
         </div>
       </div>
