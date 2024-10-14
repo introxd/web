@@ -1,18 +1,18 @@
 <template>
   <div>
-    <div flex items-center justify-between>
+    <div fyc justify-between>
       <div v-if="hasImage && props.reverse">
         <img :src="image" inline lt-xs="hidden" size="lt-md:20 md:32" rounded-full b="4 white solid" shadow-sm>
       </div>
 
-      <div flex items-center gap-4>
+      <div fyc gap-4>
         <div font-italic text="lt-md:8 md:10 #638167">
-          <div relative>
+          <div pr>
             <div>
               {{ props.prefix }}
             </div>
 
-            <div absolute top="-5%" right--2 lt-md:w-1px md:w-2px h="110%" rotate-10 bg="#638167" />
+            <div pa top="-5%" right--2 lt-md:w-1px md:w-2px h="110%" rotate-10 bg="#638167" />
           </div>
         </div>
 

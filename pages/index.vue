@@ -27,15 +27,15 @@
 </style>
 
 <template>
-  <div relative h-full flex="~ col" items-center justify-center z-10 select-none>
-    <div v-show="!visible" absolute top-0 left-0 h-full w-full flex items-center justify-center animate-fade-in>
-      <div i-line-md-loading-loop h-16 w-16 bg-gradient-to-tr from="#bd34fe" to="#47caff" />
+  <div relative h-full fccc z-10 select-none>
+    <div v-show="!visible" pa top-0 left-0 size-full fcc animate-fade-in>
+      <div i-line-md-loading-loop size-16 bg-gradient-to-tr from="#bd34fe" to="#47caff" />
       <div font-nunito op-0>
         loading
       </div>
     </div>
 
-    <div v-show="visible" relative w-full text-center animate-duration-330 animate-fade-in>
+    <div v-show="visible" pr w-full text-center animate-duration-330 animate-fade-in>
       <div relative top="lt-xs:-6 xs:-8 sm:-10" text="lt-xs:14 xs:16 sm:18 xl:24">
         <span font-nunito bg-clip-text text-transparent bg-gradient-to-tr from="#bd34fe" to="#47caff">
           Intro
@@ -43,11 +43,11 @@
         <span>🤣</span>
       </div>
 
-      <div absolute top="lt-xs:14 xs:18 sm:24 md:24 xl:32" left="50%" translate-x="-50%" w-full flex items-center gap-2>
-        <div flex items-center justify-center gap-2 text="lt-sm:4 sm:5 xl:6 dark-1" text-center w-full>
+      <div pa top="lt-xs:14 xs:18 sm:24 md:24 xl:32" w-full fyc gap-2>
+        <div fcc gap-2 text="lt-sm:4 sm:5 xl:6 dark-1" text-center w-full>
           <span>定制个人简介页面，类似</span>
           <button
-            relative hover="bg-clip-text text-transparent bg-gradient-to-tr" from="#bd34fe" to="#47caff"
+            pr hover="bg-clip-text text-transparent bg-gradient-to-tr" from="#bd34fe" to="#47caff"
             b="0 b dashed dark-1 hover:#bd34fe" clickable @click="router.push(currentUser.path)"
           >
             {{ currentUser.name }}
@@ -59,8 +59,8 @@
         </div>
       </div>
 
-      <div mt-8 flex items-center justify-center>
-        <div flex items-center justify-center clickable @click="router.push('/more')">
+      <div mt-8 fcc>
+        <div fcc clickable @click="router.push('/more')">
           <div text-dark-1 font-bold>
             详情
           </div>
@@ -70,13 +70,13 @@
     </div>
 
     <Teleport to="body">
-      <div fixed top-0 left-0 h-full w-full flex items-center justify-center z-1>
+      <div pf top-0 left-0 h-full w-full fcc z-1>
         <div class="gradient" :class="!visible ? 'hide' : ''" />
       </div>
     </Teleport>
 
     <Teleport to="body">
-      <div fixed right-2 bottom-1 text="3 gray-3">
+      <div pf right-2 bottom-1 text="3 gray-3">
         v{{ version }}
       </div>
     </Teleport>
