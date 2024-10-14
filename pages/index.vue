@@ -27,24 +27,24 @@
 </style>
 
 <template>
-  <div relative h-full fccc z-10 select-none>
-    <div v-show="!visible" pa top-0 left-0 size-full fcc animate-fade-in>
+  <div relative z-10 h-full fccc select-none>
+    <div v-show="!visible" pa left-0 top-0 size-full fcc animate-fade-in>
       <div i-line-md-loading-loop size-16 bg-gradient-to-tr from="#bd34fe" to="#47caff" />
-      <div font-nunito op-0>
+      <div op-0 font-nunito>
         loading
       </div>
     </div>
 
-    <div v-show="visible" pr w-full text-center animate-duration-330 animate-fade-in>
+    <div v-show="visible" pr w-full animate-fade-in animate-duration-330 text-center>
       <div relative top="lt-xs:-6 xs:-8 sm:-10" text="lt-xs:14 xs:16 sm:18 xl:24">
-        <span font-nunito bg-clip-text text-transparent bg-gradient-to-tr from="#bd34fe" to="#47caff">
+        <span bg-gradient-to-tr bg-clip-text text-transparent font-nunito from="#bd34fe" to="#47caff">
           Intro
         </span>
         <span>🤣</span>
       </div>
 
       <div pa top="lt-xs:14 xs:18 sm:24 md:24 xl:32" w-full fyc gap-2>
-        <div fcc gap-2 text="lt-sm:4 sm:5 xl:6 dark-1" text-center w-full>
+        <div text="lt-sm:4 sm:5 xl:6 dark-1" w-full fcc gap-2 text-center>
           <span>定制个人简介页面，类似</span>
           <button
             pr hover="bg-clip-text text-transparent bg-gradient-to-tr" from="#bd34fe" to="#47caff"
@@ -70,13 +70,13 @@
     </div>
 
     <Teleport to="body">
-      <div pf top-0 left-0 h-full w-full fcc z-1>
+      <div pf left-0 top-0 z-1 h-full w-full fcc>
         <div class="gradient" :class="!visible ? 'hide' : ''" />
       </div>
     </Teleport>
 
     <Teleport to="body">
-      <div pf right-2 bottom-1 text="3 gray-3">
+      <div pf bottom-1 right-2 text="3 gray-3">
         v{{ version }}
       </div>
     </Teleport>

@@ -23,29 +23,29 @@
 
 <template>
   <div size-full of-y-auto bg="#f4eddf">
-    <div v-show="!allReady" pa top-0 left-0 size-full fcc>
-      <div pf text-center font-linhai op-0 select-none>
+    <div v-show="!allReady" pa left-0 top-0 size-full fcc>
+      <div pf select-none text-center op-0 font-linhai>
         loading
       </div>
       <div i-line-md-loading-loop size-16 bg="#305f6f" />
     </div>
 
-    <div v-show="allReady" prose pr ma py-4 px="lt-md:8 md:4">
+    <div v-show="allReady" pr ma py-4 prose px="lt-md:8 md:4">
       <!-- 定位元素 -->
-      <div pa top-20 right="lt-md:8 md:14" text="lt-md:8 md:10 #ede0cd" font-italic animate-fade-in>
+      <div right="lt-md:8 md:14" text="lt-md:8 md:10 #ede0cd" pa top-20 animate-fade-in font-italic>
         <div>AN HAO</div>
         <div>Hand drawn</div>
       </div>
 
       <div
-        v-show="currentIndex >= 2" pa top-55 left="lt-md:60% md:55%" translate-x="-50%" font-linhai
-        text="lt-xs:6 lt-md:10 md:12 #305f6f" animate-fade-in
+        v-show="currentIndex >= 2" left="lt-md:60% md:55%" translate-x="-50%"
+        text="lt-xs:6 lt-md:10 md:12 #305f6f" pa top-55 animate-fade-in font-linhai
       >
         <div>安好</div>
         <div>手绘</div>
       </div>
 
-      <div pxc top-0 w-full class="float-images">
+      <div top-0 w-full pxc class="float-images">
         <div v-for="(item, index) in images" :key="item.src" animate-fade-in>
           <img
             :src="item.src" :style="[
@@ -69,7 +69,7 @@
 
       <!-- 文字 -->
       <div animate-fade-in flex="~ col" gap-4>
-        <div font-linhai text-5 flex="~ col" gap-4>
+        <div flex="~ col" gap-4 text-5 font-linhai>
           <div>
             <div grid="~ cols-[4rem_1fr]">
               <div text="#a74e54">

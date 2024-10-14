@@ -1,6 +1,6 @@
 <template>
   <Title prefix="01" title="关于绘画" subtitle="DRAWING" :image>
-    <div font-linhai text-5 flex="~ col" gap-4>
+    <div flex="~ col" gap-4 text-5 font-linhai>
       <div flex gap-2>
         <div i-material-symbols-check-rounded relative top-1 h-6 w-6 bg="#a74e54" />
         <div flex-1 text="#638167">
@@ -16,14 +16,14 @@
           <span>可以画</span>
           <span underline="~ 1 offset-4 wavy #a74e54">水彩风格</span>
           <span>，</span>
-          <span bg-clip-text text-transparent bg-gradient-to-r from-red-500 to-orange>五</span>
-          <span bg-clip-text text-transparent bg-gradient-to-r from-yellow to-green>彩</span>
-          <span bg-clip-text text-transparent bg-gradient-to-r from-blue to-indigo>斑</span>
-          <span font-sans bg-clip-text text-transparent bg-gradient-to-r from-indigo to-purple>斓</span>
+          <span from-red-500 to-orange bg-gradient-to-r bg-clip-text text-transparent>五</span>
+          <span from-yellow to-green bg-gradient-to-r bg-clip-text text-transparent>彩</span>
+          <span from-blue to-indigo bg-gradient-to-r bg-clip-text text-transparent>斑</span>
+          <span from-indigo to-purple bg-gradient-to-r bg-clip-text text-transparent font-sans>斓</span>
           <span>的</span>
           <span text-black>黑</span>
-          <span text-white bg-dark rounded-1>白</span>
-          <span bg-clip-text text-transparent bg-gradient-to-r from="#7583ab" to="#7a528d">七彩</span>
+          <span rounded-1 bg-dark text-white>白</span>
+          <span bg-gradient-to-r bg-clip-text text-transparent from="#7583ab" to="#7a528d">七彩</span>
           <span>都行。</span>
         </div>
       </div>

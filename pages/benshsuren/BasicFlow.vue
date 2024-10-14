@@ -1,6 +1,6 @@
 <template>
   <Title prefix="03" title="关于约稿流程" subtitle="BASIC FLOW" :image>
-    <div font-linhai text-5 flex="~ col" gap-4>
+    <div flex="~ col" gap-4 text-5 font-linhai>
       <div flex gap-2>
         <Heart />
         <div flex-1>

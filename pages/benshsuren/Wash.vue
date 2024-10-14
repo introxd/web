@@ -1,6 +1,6 @@
 <template>
   <Title prefix="04" title="可浣洗" subtitle="WASH" :image reverse>
-    <div font-linhai text-5 flex="~ col" gap-4>
+    <div flex="~ col" gap-4 text-5 font-linhai>
       <div flex gap-2>
         <Heart />
         <div flex-1 text="#638167">

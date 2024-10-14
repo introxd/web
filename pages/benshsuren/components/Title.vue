@@ -12,7 +12,7 @@
               {{ props.prefix }}
             </div>
 
-            <div pa top="-5%" right--2 lt-md:w-1px md:w-2px h="110%" rotate-10 bg="#638167" />
+            <div top="-5%" h="110%" pa right--2 rotate-10 lt-md:w-1px md:w-2px bg="#638167" />
           </div>
         </div>
 

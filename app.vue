@@ -9,7 +9,7 @@ body,
 <template>
   <div h-full w-full flex="~ col">
     <NuxtPage />
-    <button v-show="appStore.showBackButton" fixed top-2 left-2 p-1 bg-gray-2 rounded-full z-100 @click="router.push('/')">
+    <button v-show="appStore.showBackButton" fixed left-2 top-2 z-100 rounded-full bg-gray-2 p-1 @click="router.push('/')">
       <div i-ic-round-arrow-back h-6 w-6 bg-gray />
     </button>
   </div>

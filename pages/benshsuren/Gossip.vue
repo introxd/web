@@ -1,5 +1,5 @@
 <template>
-  <div relative mt="lt-md:10 md:14" p-6 bg-white text="4.5 #638167" font-linhai rounded-sm shadow-sm>
+  <div mt="lt-md:10 md:14" text="4.5 #638167" relative rounded-sm bg-white p-6 shadow-sm font-linhai>
     <div absolute top="lt-md:-12 md:-14" left="50%" translate-x="-50%">
       <img :src="image" size="lt-md:24 md:28" rounded-full>
     </div>

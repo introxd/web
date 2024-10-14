@@ -1,6 +1,6 @@
 <template>
   <div pr size-full>
-    <div v-show="loading" pa top-0 left-0 size-full fcc>
+    <div v-show="loading" pa left-0 top-0 size-full fcc>
       <div i-line-md-loading-loop size-16 bg-gray-2 />
     </div>
 

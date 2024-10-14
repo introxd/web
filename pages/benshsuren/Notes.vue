@@ -1,6 +1,6 @@
 <template>
   <Title prefix="05" title="注意事项" subtitle="NOTES" :image>
-    <div font-linhai text-5 flex="~ col" gap-4>
+    <div flex="~ col" gap-4 text-5 font-linhai>
       <div v-for="(note, index) in notes" :key="index" flex gap-2>
         <Heart />
         <div flex-1 text="#638167">
