@@ -11,7 +11,8 @@
     "build": "esno scripts/build.ts",
     "start-docker": "nuxt start --hostname 0.0.0.0 --port $NUXT_PORT",
     "release": "bumpp",
-    "lint": "eslint . --flag unstable_ts_config"
+    "lint": "eslint --cache --flag unstable_ts_config",
+    "prepare": "simple-git-hooks"
   },
   "dependencies": {
     "@introxd/components": "^0.0.1",
@@ -36,14 +37,22 @@
     "eslint-plugin-unused-imports": "^4.1.4",
     "esno": "^4.7.0",
     "fs-extra": "^11.2.0",
+    "lint-staged": "^15.2.10",
     "lodash-es": "^4.17.21",
     "nuxthub": "^0.6.1",
     "sass-embedded": "^1.79.1",
+    "simple-git-hooks": "^2.11.1",
     "typescript": "^5.6.2",
     "unimport": "^3.12.0",
     "unocss": "^0.62.4",
     "unocss-preset-useful": "^0.6.0",
     "unplugin-vue-components": "^0.27.4",
     "wrangler": "^3.78.5"
+  },
+  "simple-git-hooks": {
+    "pre-commit": "pnpm lint-staged"
+  },
+  "lint-staged": {
+    "*": "eslint --cache --flag unstable_ts_config --fix"
   }
 }
