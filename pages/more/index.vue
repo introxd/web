@@ -1,7 +1,7 @@
 <style lang="scss" scoped></style>
 
 <template>
-  <div h-full of-y-auto>
+  <div h-full px-6 of-y-auto>
     <div ma prose>
       <div>
         <h2>
