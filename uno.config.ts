@@ -39,6 +39,9 @@ export default defineConfig({
       }
     ]
   ],
+  shortcuts: [
+    ['clickable', 'active:scale-97 transition-transform cursor-pointer']
+  ],
   presets: [
     presetUno(),
     presetAttributify(),
