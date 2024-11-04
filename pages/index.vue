@@ -118,7 +118,7 @@ onNuxtReady(async () => {
   // 字体
   document.fonts.ready.then(() => {
     setTimeout(() => {
-      // visible.value = true
+      visible.value = true
     }, 500)
   })
 })
