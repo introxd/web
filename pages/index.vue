@@ -30,7 +30,7 @@
   <div relative z-10 h-full fccc select-none>
     <div v-show="!visible" pa left-0 top-0 size-full fcc animate-fade-in>
       <div i-line-md-loading-loop size-16 bg-gradient-to-tr from="#bd34fe" to="#47caff" />
-      <div op-0 font-nunito>
+      <div size-0 select-none op-0 font-nunito>
         loading
       </div>
     </div>
@@ -118,7 +118,7 @@ onNuxtReady(async () => {
   // 字体
   document.fonts.ready.then(() => {
     setTimeout(() => {
-      visible.value = true
+      // visible.value = true
     }, 500)
   })
 })

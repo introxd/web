@@ -24,7 +24,7 @@
 <template>
   <div size-full of-y-auto bg="#f4eddf">
     <div v-show="!allReady" pa left-0 top-0 size-full fcc>
-      <div pf select-none text-center op-0 font-linhai>
+      <div pf size-0 select-none text-center op-0 font-linhai>
         loading
       </div>
       <div i-line-md-loading-loop size-16 bg="#305f6f" />
