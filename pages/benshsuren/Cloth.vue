@@ -30,7 +30,8 @@
 </template>
 
 <script lang="ts" setup>
+import image from '@/assets/images/benshsuren/cloth.png'
+
 import Heart from './components/Heart.vue'
 import Title from './components/Title.vue'
-import image from '@/assets/images/benshsuren/cloth.png'
 </script>

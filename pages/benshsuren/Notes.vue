@@ -17,9 +17,10 @@
 </template>
 
 <script lang="ts" setup>
+import image from '@/assets/images/benshsuren/notes.png'
+
 import Heart from './components/Heart.vue'
 import Title from './components/Title.vue'
-import image from '@/assets/images/benshsuren/notes.png'
 
 const notes = [
   '纹理起伏很大的布料无法画的很细致，大面积绘画部分会发硬，颜料透底和小范围晕染无法避免',

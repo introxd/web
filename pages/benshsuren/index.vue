@@ -52,13 +52,13 @@
               {
                 top: `${index === 0 ? 5 : (index + 1) * 5}rem`,
                 width: `${item.random}rem`,
-                height: `${item.random}rem`,
+                height: `${item.random}rem`
               },
               (index % 2 === 0 ? {
-                left: `calc(0.5rem + ${item.random * (index + 1)}px)`,
+                left: `calc(0.5rem + ${item.random * (index + 1)}px)`
               } : {
-                right: `calc(0.5rem + ${item.random * (index + 1)}px)`,
-              }),
+                right: `calc(0.5rem + ${item.random * (index + 1)}px)`
+              })
             ]"
           >
         </div>
@@ -127,13 +127,13 @@
 </template>
 
 <script lang="ts" setup>
+import BasicFlow from './BasicFlow.vue'
+import Cloth from './Cloth.vue'
 import Heart from './components/Heart.vue'
 import Drawing from './Drawing.vue'
-import Cloth from './Cloth.vue'
-import BasicFlow from './BasicFlow.vue'
-import Wash from './Wash.vue'
-import Notes from './Notes.vue'
 import Gossip from './Gossip.vue'
+import Notes from './Notes.vue'
+import Wash from './Wash.vue'
 
 const images = ref<{
   src: string

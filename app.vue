@@ -16,10 +16,10 @@ body,
 </template>
 
 <script lang="ts" setup>
+import { initAnalytics } from './utils/analytics/51.la'
+
 import '@introxd/components/style.css'
 import '@/assets/styles/main.css'
-
-import { initAnalytics } from './utils/analytics/51.la'
 
 const route = useRoute()
 const router = useRouter()
