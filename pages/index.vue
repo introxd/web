@@ -36,14 +36,14 @@
     </div>
 
     <div v-show="visible" pr w-full animate-fade-in animate-duration-330 text-center>
-      <div relative top="lt-xs:-6 xs:-8 sm:-10" text="lt-xs:14 xs:16 sm:18 xl:24">
+      <div relative top="lt-xs:-6 xs:-12 sm:-14 lg:-16" text="lt-xs:14 xs:16 sm:18 xl:24">
         <span bg-gradient-to-tr bg-clip-text text-transparent font-nunito from="#bd34fe" to="#47caff">
           Intro
         </span>
         <span>🤣</span>
       </div>
 
-      <div pa top="lt-xs:14 xs:12" w-full fyc flex-col gap="lt-xs:4 xs:6">
+      <div pa top="lt-xs:14 xs:10 sm:10 md:10 lg:12" w-full fyc flex-col gap="lt-xs:4 xs:6">
         <div text="lt-sm:4 sm:5 xl:6 dark-1" w-full fcc gap-2 text-center lt-xs:flex-col>
           <span>定制个人简介页面，类似</span>
           <div fcc gap-2>
