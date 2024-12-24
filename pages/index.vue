@@ -43,28 +43,30 @@
         <span>🤣</span>
       </div>
 
-      <div pa top="lt-xs:14 xs:18 sm:24 md:24 xl:32" w-full fyc gap-2>
-        <div text="lt-sm:4 sm:5 xl:6 dark-1" w-full fcc gap-2 text-center>
+      <div pa top="lt-xs:14 xs:12" w-full fyc flex-col gap="lt-xs:4 xs:6">
+        <div text="lt-sm:4 sm:5 xl:6 dark-1" w-full fcc gap-2 text-center lt-xs:flex-col>
           <span>定制个人简介页面，类似</span>
-          <button
-            pr hover="bg-clip-text text-transparent bg-gradient-to-tr" from="#bd34fe" to="#47caff"
-            b="0 b dashed dark-1 hover:#bd34fe" clickable @click="router.push(currentUser.path)"
-          >
-            {{ currentUser.name }}
-          </button>
-          <div
-            i-material-symbols-light-directory-sync-rounded size-8 bg-gray clickable
-            :class="refreshClicked ? 'animate-spin animate-count-1' : ''" @click="refresh"
-          />
-        </div>
-      </div>
-
-      <div mt-8 fcc>
-        <div fcc clickable @click="router.push('/more')">
-          <div text-dark-1 font-bold>
-            详情
+          <div fcc gap-2>
+            <button
+              pr hover="bg-clip-text text-transparent bg-gradient-to-tr" from="#bd34fe" to="#47caff"
+              b="0 b dashed dark-1 hover:#bd34fe" clickable @click="router.push(currentUser.path)"
+            >
+              {{ currentUser.name }}
+            </button>
+            <div
+              i-material-symbols-light-directory-sync-rounded size="lt-xs:6 xs:8" bg-gray clickable
+              :class="refreshClicked ? 'animate-spin animate-count-1' : ''" @click="refresh"
+            />
           </div>
-          <div i-material-symbols-arrow-right-rounded size-6 bg-dark-1 />
+        </div>
+
+        <div fcc>
+          <div fcc clickable @click="router.push('/more')">
+            <div text-dark-1 font-bold>
+              详情
+            </div>
+            <div i-material-symbols-arrow-right-rounded size-6 bg-dark-1 />
+          </div>
         </div>
       </div>
     </div>
