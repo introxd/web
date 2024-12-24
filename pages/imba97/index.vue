@@ -13,7 +13,7 @@ const iframe = ref()
 const loading = ref(true)
 
 onMounted(() => {
-  iframe.value.src = 'https://me.imba97.cn/resume'
+  iframe.value.src = 'https://imba97.me/resume'
   iframe.value.onload = () => {
     loading.value = false
   }
