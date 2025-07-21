@@ -27,3 +27,5 @@ logs
 
 .eslintcache
 eslint.config.js
+
+public/assets/fonts/

@@ -1,14 +1,14 @@
+import { createLocalFontProcessor } from '@unocss/preset-web-fonts/local'
 import {
   defineConfig,
   presetAttributify,
   presetIcons,
   presetTypography,
-  presetUno,
+  presetWebFonts,
+  presetWind3,
   transformerDirectives,
   transformerVariantGroup
 } from 'unocss'
-
-import { presetUseful } from 'unocss-preset-useful'
 
 export default defineConfig({
   theme: {
@@ -29,12 +29,6 @@ export default defineConfig({
   },
   rules: [
     [
-      'font-nunito',
-      {
-        'font-family': 'Nunito-Medium, "Microsoft YaHei", "SimHei", "Arial", sans-serif;'
-      }
-    ],
-    [
       'font-linhai',
       {
         'font-family': 'linhai, "Microsoft YaHei", "SimHei", "Arial", sans-serif;'
@@ -42,16 +36,53 @@ export default defineConfig({
     ]
   ],
   shortcuts: [
-    ['clickable', 'active:scale-97 transition-transform cursor-pointer']
+    ['clickable', 'active:scale-97 transition-transform cursor-pointer'],
+
+    ['pr', 'relative'],
+    ['pa', 'absolute'],
+    ['pf', 'fixed'],
+    ['ps', 'sticky'],
+
+    // position layout
+    ['pxc', 'pa left-1/2 -translate-x-1/2'],
+    ['pyc', 'pa top-1/2 -translate-y-1/2'],
+    ['pcc', 'pxc pyc'],
+
+    // flex layout
+    ['fcc', 'flex justify-center items-center'],
+    ['fccc', 'fcc flex-col'],
+    ['fxc', 'flex justify-center'],
+    ['fyc', 'flex items-center'],
+    ['fs', 'flex justify-start'],
+    ['fsc', 'flex justify-start items-center'],
+    ['fse', 'flex justify-start items-end'],
+    ['fe', 'flex justify-end'],
+    ['fec', 'flex justify-end items-center'],
+    ['fb', 'flex justify-between'],
+    ['fbc', 'flex justify-between items-center'],
+    ['fa', 'flex justify-around'],
+    ['fac', 'flex justify-around items-center'],
+    ['fw', 'flex justify-wrap'],
+    ['fwr', 'flex justify-wrap-reverse']
   ],
   presets: [
-    presetUno(),
-    presetUseful(),
+    presetWind3(),
     presetAttributify(),
     presetIcons({
-      scale: 1.2
+      extraProperties: {
+        'display': 'inline-block',
+        'height': '1.2em',
+        'width': '1.2em',
+        'vertical-align': 'text-bottom'
+      }
     }),
-    presetTypography()
+    presetTypography(),
+    presetWebFonts({
+      fonts: {
+        nunito: 'Nunito'
+      },
+      processors: createLocalFontProcessor()
+    })
   ],
   transformers: [
     transformerDirectives(),
