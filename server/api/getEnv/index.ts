@@ -1,4 +1,5 @@
-/* eslint-disable node/prefer-global/process */
+import process from 'node:process'
+
 export default defineEventHandler(async () => {
   return [
     'FIRST_SCREEN'
