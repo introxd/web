@@ -30,7 +30,7 @@
   <div relative z-10 h-full fccc select-none>
     <div v-show="!visible" pa left-0 top-0 size-full fcc animate-fade-in>
       <div i-line-md-loading-loop size-16 bg-gradient-to-tr from="#bd34fe" to="#47caff" />
-      <div size-0 select-none op-0 font-nunito>
+      <div size-0 select-none font-nunito op-0>
         loading
       </div>
     </div>
@@ -43,18 +43,18 @@
         <span>🤣</span>
       </div>
 
-      <div pa top="lt-xs:14 xs:10 sm:10 md:10 lg:12" w-full fyc flex-col gap="lt-xs:4 xs:6">
+      <div top="lt-xs:14 xs:10 sm:10 md:10 lg:12" pa w-full fyc flex-col gap="lt-xs:4 xs:6">
         <div text="lt-sm:4 sm:5 xl:6 dark-1" w-full fcc gap-2 text-center lt-xs:flex-col>
           <span>定制个人简介页面，类似</span>
           <div fcc gap-2>
             <button
-              pr hover="bg-clip-text text-transparent bg-gradient-to-tr" from="#bd34fe" to="#47caff"
-              b="0 b dashed dark-1 hover:#bd34fe" clickable @click="router.push(currentUser.path)"
+              hover="bg-clip-text text-transparent bg-gradient-to-tr" from="#bd34fe" to="#47caff"
+              b="0 b dashed dark-1 hover:#bd34fe" pr clickable @click="router.push(currentUser.path)"
             >
               {{ currentUser.name }}
             </button>
             <div
-              i-material-symbols-light-directory-sync-rounded size="lt-xs:6 xs:8" bg-gray clickable
+              size="lt-xs:6 xs:8" i-material-symbols-light-directory-sync-rounded clickable bg-gray
               :class="refreshClicked ? 'animate-spin animate-count-1' : ''" @click="refresh"
             />
           </div>
@@ -146,11 +146,12 @@ function randomUser() {
   // 随机用户
   const index = _random(0, randomUserPool.length - 1)
 
-  const [random] = _remove(randomUserPool, {
-    name: randomUserPool[index].name
-  })
-
-  user.value = random
+  if (randomUserPool[index]) {
+    const [random] = _remove(randomUserPool, {
+      name: randomUserPool[index].name
+    })
+    user.value = random
+  }
 }
 
 function refresh() {
